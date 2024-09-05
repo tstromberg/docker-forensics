@@ -114,11 +114,13 @@ def process_item(dirpath, item):
         mtime = "%14.3f" % (status.st_mtime)
         atime = "%14.3f" % (status.st_atime)
         ctime = "%14.3f" % (status.st_ctime)
+        btime = "%14.3f" % (status.st_birthtime)
     else:
         mtime = "{:14.3f}".format(status.st_mtime)
         atime = "{:14.3f}".format(status.st_atime)
         ctime = "{:14.3f}".format(status.st_ctime)
-    btime = 0
+        btime = "{:14.3f}".format(status.st_birthtime)
+#    btime = 0
     size = status.st_size
     uid = status.st_uid
     gid = status.st_gid
